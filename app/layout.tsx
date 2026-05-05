@@ -6,7 +6,7 @@ import GravityBackground from '@/components/GravityBackground';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Joseph Well - Application Developer',
+  title: 'Joseph githinji - Application Developer',
   description: 'Building Intelligence That Works for People',
 }
 
