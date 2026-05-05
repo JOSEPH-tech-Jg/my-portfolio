@@ -1,4 +1,4 @@
-# Joseph Well Portfolio
+# Joseph githinji  Portfolio
 
 A stunning, cinematic one-page portfolio for Joseph Well, Application Developer from KOOD Campus.
 
