@@ -1,36 +1,28 @@
-# Joseph githinji  Portfolio
+# Joseph Githinji — Cybersecurity Engineer Portfolio
 
-A stunning, cinematic one-page portfolio for Joseph githinji, Application Developer from KOOD Campus.
+A professional, denoised cybersecurity portfolio built with Next.js, TypeScript, Tailwind CSS and Framer Motion. Clean dark aesthetic with focused, low-noise motion.
 
-## Features
+## Pages
 
-- Modern Dark Mode with Glassmorphism effects
-- Framer Motion scroll-triggered animations
-- Custom glow cursor
-- Human-centric design focusing on impact
-- Responsive design (Mobile-first)
-- Optimized for Core Web Vitals
+- `/` — Home: capabilities, expertise, experience timeline, selected work and contact
+- `/cv` — Professional cybersecurity resume
 
-## Tech Stack
+## Stack
 
-- Next.js 14
+- Next.js (App Router)
 - TypeScript
 - Tailwind CSS
 - Framer Motion
+- Custom canvas network background + type writer terminal copy components
 
-## Getting Started
+## Getting started
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+npm run dev
+```
 
-2. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+Visit `http://localhost:3000`.
 
 ## Build
 

@@ -1,109 +1,117 @@
 'use client'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import GravityBackground from '@/components/GravityBackground'
 
-export default function CVPage() {
+const competencies = [
+  'Penetration Testing', 'SOC Operations', 'Incident Response', 'Zero-Trust Architecture',
+  'Cloud Security', 'Secure SDLC', 'Threat Hunting', 'Detection Engineering',
+  'IAM & Privileged Access', 'Cryptography & Key Management', 'Malware Analysis', 'Risk Frameworks'
+]
+
+const exp = [
+  {
+    y: '2022 - Present',
+    r: 'Security Engineer',
+    o: 'Independent & Contract · Nairobi',
+    d: 'Lead offensive & defensive engagements for clients in fintech and e-commerce. Build detection pipelines, run red-team simulations and harden cloud estates to production standard.'
+  },
+  {
+    y: '2020 - 2022',
+    r: 'Application Developer · Security Focused',
+    o: 'Enterprise',
+    d: 'Developed and secured production applications. Integrated OWASP-aligned code review, dependency scanning and CI/CD security gates into the delivery pipeline.'
+  },
+  {
+    y: '2018 - 2020',
+    r: 'Full-Stack Developer',
+    o: 'Startups',
+    d: 'Shipped web products end to end while introducing automated security checks and hardening core infrastructure.'
+  }
+]
+
+const certs = ['CompTIA Security+', 'CEH', 'AWS Security Speciality', 'OSCP (in view)']
+
+export default function CV() {
   return (
-    <main className="relative min-h-screen text-white overflow-x-hidden selection:bg-amber-500/30">
-      {/* THE BACKGROUND ALLOCATION */}
-      <GravityBackground />
+    <main className="relative min-h-screen px-6 py-12">
+      <div className="mx-auto max-w-4xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <Link href="/" className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400 hover:text-cyan-300">
+            &larr; Back to home
+          </Link>
+        </motion.div>
 
-      <div className="relative z-10 px-6 py-16 md:px-12 lg:px-20">
-        <div className="max-w-5xl mx-auto">
-          
-          {/* HEADER AREA */}
-          <header className="mb-16">
-            <Link
-              href="/"
-              className="group inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.4em] text-amber-400 hover:text-white transition-all duration-300"
-            >
-              <span className="group-hover:-translate-x-2 transition-transform duration-300">←</span> Back to home
-            </Link>
+        <motion.header
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mt-10 pb-8"
+        >
+          <p className="font-mono text-xs uppercase tracking-[0.35em] text-cyan-400">Curriculum Vitae</p>
+          <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            Joseph Githinji
+          </h1>
+          <p className="mt-2 text-lg text-slate-300">Cybersecurity Engineer</p>
+          <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm text-slate-400">
+            <span>Nairobi, Kenya</span>
+            <span>hello@josephgithinji.dev</span>
+            <span>github.com/josephgithinji</span>
+          </div>
+        </motion.header>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="mt-10 space-y-4"
-            >
-              <p className="text-[10px] uppercase tracking-[0.5em] text-amber-500 font-black">JOSEPH githinji</p>
-              <h1 className="text-4xl md:text-7xl font-black leading-[1.1] tracking-tighter text-white">
-                AI SYSTEMS <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
-                  ARCHITECT.
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="space-y-12"
+        >
+          <div>
+            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">Profile</h2>
+            <p className="mt-3 leading-relaxed text-slate-300">
+              Cybersecurity engineer with 5+ years across offensive and defensive security. I help
+              organizations understand, reduce and respond to risk &mdash; aligning technical defenses
+              with business priorities under a zero-trust mindset.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">Core Competencies</h2>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {competencies.map((c) => (
+                <span key={c} className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-slate-300">
+                  {c}
                 </span>
-              </h1>
-              <p className="text-lg md:text-xl text-gray-400 max-w-3xl font-light leading-relaxed">
-                Bridging the Human-AI Divide through <span className="text-white">Neural Automation</span> & Scalable Architecture.
-              </p>
-            </motion.div>
-          </header>
-
-          {/* CV CONTENT BLOCKS */}
-          <section className="grid gap-8">
-            
-            {/* VALUE PROPOSITION - Full Width Glass */}
-            <motion.div 
-              whileHover={{ translateY: -5 }}
-              className="rounded-3xl border border-white/5 bg-white/[0.03] backdrop-blur-xl p-10 transition-all duration-500 hover:border-amber-500/30"
-            >
-              <h2 className="text-[10px] font-black tracking-[0.3em] text-amber-500 mb-6 uppercase">⚡ THE VALUE PROPOSITION</h2>
-              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed font-light">
-                Specialized in translating high-level <span className="text-amber-400 font-medium">Neural Networks</span> and LLMs into production-ready applications. I engineer <span className="text-white italic">Human Liberation</span> by automating the mundane.
-              </p>
-            </motion.div>
-
-            {/* TWO COLUMN GRID */}
-            <div className="grid gap-8 lg:grid-cols-2">
-              {/* EXPERTISE */}
-              <div className="rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-lg p-10 hover:border-blue-500/30 transition-colors duration-500">
-                <h3 className="text-[10px] font-black tracking-[0.3em] text-amber-500 mb-8 uppercase">🚀 CORE EXPERTISE</h3>
-                <ul className="space-y-6">
-                  {[
-                    { label: "AI & ML", desc: "LLM Integration (OpenAI, LangChain), Neural Automation." },
-                    { label: "Full-Stack", desc: "Next.js, TypeScript, Java (Spring Boot), Python." },
-                    { label: "Architecture", desc: "Scalable Backends, Microservices, Cloud (AWS/GCP)." },
-                    { label: "UI/UX", desc: "Cinematic Design, Motion Graphics, Responsive Flow." }
-                  ].map((item, i) => (
-                    <li key={i} className="group">
-                      <span className="block text-xs font-bold text-white mb-1 uppercase tracking-wider">{item.label}</span>
-                      <span className="text-sm text-gray-400 font-light group-hover:text-gray-200 transition-colors">{item.desc}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* IMPACT */}
-              <div className="rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-lg p-10 hover:border-amber-500/30 transition-colors duration-500">
-                <h3 className="text-[10px] font-black tracking-[0.3em] text-amber-500 mb-8 uppercase">🛠 TECHNICAL IMPACT</h3>
-                <ul className="space-y-6">
-                  <li className="text-sm leading-relaxed text-gray-300">
-                    <span className="text-white font-bold block mb-2">Neural Automation:</span> Reduced manual entry by <span className="text-amber-400">85%</span> via AI-driven workflows.
-                  </li>
-                  <li className="text-sm leading-relaxed text-gray-300">
-                    <span className="text-white font-bold block mb-2">LLM Integration:</span> Handles <span className="text-amber-400">3,000+</span> monthly inquiries with 92% satisfaction.
-                  </li>
-                  <li className="text-sm leading-relaxed text-gray-300">
-                    <span className="text-white font-bold block mb-2">Scalable Systems:</span> Rebuilt Java backends, increasing uptime to <span className="text-amber-400">99.99%</span>.
-                  </li>
-                </ul>
-              </div>
+              ))}
             </div>
+          </div>
 
-            {/* FOOTER GLASS - CONTACT */}
-            <footer className="rounded-3xl border border-white/5 bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-2xl p-10 flex flex-col md:flex-row justify-between items-center gap-8">
-              <div className="text-center md:text-left">
-                <h3 className="text-[10px] font-black tracking-[0.3em] text-amber-500 mb-2 uppercase">💡 THE PHILOSOPHY</h3>
-                <p className="text-gray-400 text-sm italic">&ldquo;Technology should never be a barrier; it should be a bridge.&rdquo;</p>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <a href="#" className="px-6 py-3 rounded-full border border-white/10 text-[10px] font-bold tracking-widest hover:bg-white hover:text-black transition-all text-center uppercase">LinkedIn</a>
-                <a href="#" className="px-6 py-3 rounded-full border border-white/10 text-[10px] font-bold tracking-widest hover:bg-white hover:text-black transition-all text-center uppercase">GitHub</a>
-              </div>
-            </footer>
-          </section>
-        </div>
+          <div>
+            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">Experience</h2>
+            <div className="mt-4 space-y-6">
+              {exp.map((e) => (
+                <div key={e.y} className="border-l border-white/10 pl-6">
+                  <div className="font-mono text-xs uppercase tracking-widest text-cyan-400">{e.y}</div>
+                  <h3 className="mt-1 text-base font-semibold text-white">{e.r}</h3>
+                  <div className="text-sm text-slate-500">{e.o}</div>
+                  <p className="mt-2 text-sm leading-relaxed text-slate-400">{e.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">Certifications &amp; Education</h2>
+            <ul className="mt-3 space-y-2 text-slate-300">
+              {certs.map((c) => (
+                <li key={c} className="font-mono text-sm">{c}</li>
+              ))}
+            </ul>
+          </div>
+        </motion.section>
+
+        <footer className="mt-14 border-t border-white/5 pt-6 font-mono text-[10px] uppercase tracking-[0.3em] text-slate-600">
+          JG_sec &middot; 2026
+        </footer>
       </div>
     </main>
   )
