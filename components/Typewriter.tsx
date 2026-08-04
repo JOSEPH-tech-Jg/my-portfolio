@@ -7,7 +7,8 @@ const phrases = [
   'SOC operations.',
   'cloud security.',
   'incident response.',
-  'threat intelligence.'
+  'threat intelligence.',
+  'AI model security.'
 ]
 
 export default function Typewriter() {

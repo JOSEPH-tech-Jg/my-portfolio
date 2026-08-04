@@ -210,11 +210,14 @@ export default function Home() {
                 </p>
               </div>
               <div className="flex flex-col gap-3">
-                <a href="mailto:hello@josephgithinji.dev" className="font-mono text-cyan-400 hover:text-cyan-300">
-                  hello@josephgithinji.dev
+                <a href="mailto:josephgithinji309@gmail.com" className="font-mono text-cyan-400 hover:text-cyan-300">
+                  josephgithinji309@gmail.com
                 </a>
-                <a href="https://github.com" className="font-mono text-slate-400 hover:text-white">
-                  github.com/josephgithinji
+                <a href="https://www.linkedin.com/in/joseph-githinji-082b8136b/" target="_blank" rel="noopener noreferrer" className="font-mono text-slate-400 hover:text-white">
+                  linkedin.com/in/joseph-githinji
+                </a>
+                <a href="https://gitea.kood.tech/josephgithinjimwangi/" target="_blank" rel="noopener noreferrer" className="font-mono text-slate-400 hover:text-white">
+                  gitea.kood.tech/josephgithinjimwangi
                 </a>
               </div>
             </div>

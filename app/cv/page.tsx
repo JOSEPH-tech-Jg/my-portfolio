@@ -29,7 +29,18 @@ const exp = [
   }
 ]
 
-const certs = ['CompTIA Security+', 'CEH', 'AWS Security Speciality', 'OSCP (in view)']
+const certs = [
+  'Specialization: Cybersecurity & AI',
+  'Kood — Java Certification',
+  'Kood — Python Certification',
+  'Kood — Programming Languages (multiple)'
+]
+
+const education = [
+  { school: 'Western Governors University (WGU)', degree: 'BSc in Computer Science / Information Technology' },
+  { school: 'Kood Technologies', degree: 'Software engineering — Java, Python & core programming languages' },
+  { school: 'Riara', degree: 'Postgraduate study' }
+]
 
 export default function CV() {
   return (
@@ -54,8 +65,9 @@ export default function CV() {
           <p className="mt-2 text-lg text-slate-300">Cybersecurity Engineer</p>
           <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 font-mono text-sm text-slate-400">
             <span>Nairobi, Kenya</span>
-            <span>hello@josephgithinji.dev</span>
-            <span>github.com/josephgithinji</span>
+            <span>josephgithinji309@gmail.com</span>
+            <a href="https://gitea.kood.tech/josephgithinjimwangi/" target="_blank" rel="noopener noreferrer">gitea.kood.tech/josephgithinjimwangi</a>
+            <a href="https://www.linkedin.com/in/joseph-githinji-082b8136b/" target="_blank" rel="noopener noreferrer">linkedin.com/in/joseph-githinji</a>
           </div>
         </motion.header>
 
@@ -68,9 +80,10 @@ export default function CV() {
           <div>
             <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">Profile</h2>
             <p className="mt-3 leading-relaxed text-slate-300">
-              Cybersecurity engineer with 5+ years across offensive and defensive security. I help
-              organizations understand, reduce and respond to risk &mdash; aligning technical defenses
-              with business priorities under a zero-trust mindset.
+              Cybersecurity engineer specialized in cybersecurity and AI, combining offensive and
+              defensive security with intelligent automation. I help organizations understand,
+              reduce and respond to risk &mdash; aligning technical defenses with business
+              priorities under a zero-trust mindset.
             </p>
           </div>
 
@@ -100,7 +113,19 @@ export default function CV() {
           </div>
 
           <div>
-            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">Certifications &amp; Education</h2>
+            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">Education</h2>
+            <ul className="mt-3 space-y-3">
+              {education.map((e) => (
+                <li key={e.school}>
+                  <div className="text-sm font-semibold text-white">{e.school}</div>
+                  <div className="text-sm text-slate-400">{e.degree}</div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h2 className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400">Certifications</h2>
             <ul className="mt-3 space-y-2 text-slate-300">
               {certs.map((c) => (
                 <li key={c} className="font-mono text-sm">{c}</li>
