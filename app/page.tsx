@@ -6,6 +6,7 @@ import Hud from '../components/Hud'
 import Trust from '../components/Trust'
 import Steps from '../components/Steps'
 import Quotes from '../components/Quotes'
+import WhatIDo from '../components/WhatIDo'
 
 const services = [
   { t: 'Penetration Testing', d: 'Scope-driven ethical hacking of web, mobile, API and network surfaces following OWASP, NIST and MITRE methodology to surface risk before attackers do.' },
@@ -107,10 +108,11 @@ export default function Home() {
           </div>
         </section>
 
+        <WhatIDo />
+
         <section id="expertise" className="px-6 py-24">
           <div className="mx-auto max-w-6xl">
-            <SectionLabel>Expertise</SectionLabel>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <SectionLabel>Expertise</SectionLabel>            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
               A full-spectrum security skill set
             </h2>
             <div className="mt-12 grid gap-6 md:grid-cols-2">
